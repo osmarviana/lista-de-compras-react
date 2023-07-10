@@ -13,7 +13,7 @@ export const HeaderItems = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   @media (max-width: 375px) {
     font-size: 12px;
@@ -24,8 +24,11 @@ export const HeaderItems = styled.div`
 `;
 
 export const InfoItemHeader = styled.div`
-  width: 20%;
+  width: 25%;
   text-align: center;
+  &.info-item-box {
+    width: 10%;
+  }
 `;
 
 export const BoxList = styled.div`
@@ -135,33 +138,37 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 0;
-  gap: 10px;
+  margin: 10px 0;
 `;
 
 export const InfoList = styled.div`
   width: 100%;
-  background-color: #303030;
+  color: #303030;
+  /* background-color: #303030; */
 `;
 
 export const InfoItem = styled.div`
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  text-align: center;
+  font-size: 14px;
+  &.info-item-box {
+    width: 10%;
+  }
   @media (max-width: 465px) {
-    font-size: 14px;
+    font-size: 12px;
   }
   @media (max-width: 320px) {
-    font-size: 12px;
+    font-size: 10px;
   }
   & input {
     width: 50px;
     border: none;
     padding: 2px 5px;
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     &[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -172,7 +179,7 @@ export const InfoItem = styled.div`
     }
     @media (max-width: 465px) {
       width: 40px;
-      font-size: 12px;
+      font-size: 10px;
     }
     @media (max-width: 375px) {
       width: 35px;

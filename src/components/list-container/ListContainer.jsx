@@ -41,6 +41,7 @@ export const ListContainer = () => {
 
     const newItem = { value: itemValue, quantity: 0, price: 0 };
     setItens([...itens, newItem]);
+    console.log(itens);
 
     setShowList(true);
 
@@ -75,14 +76,6 @@ export const ListContainer = () => {
     return total.toFixed(2);
   };
 
-  // const clearValue = (index, event) => {
-  //   event.target.value = "";
-  //   const updatedItens = [...itens];
-  //   updatedItens[index].quantity = 0;
-  //   updatedItens[index].price = 0;
-  //   setItens(updatedItens);
-  // };
-
   return (
     <Container>
       <BoxList>
@@ -106,17 +99,17 @@ export const ListContainer = () => {
                   <InfoItemHeader>
                     <span>Item</span>
                   </InfoItemHeader>
-                  <InfoItemHeader>
+                  <InfoItemHeader className="info-item-box">
                     <span>Valor</span>
                   </InfoItemHeader>
-                  <InfoItemHeader>
+                  <InfoItemHeader className="info-item-box">
                     <span>Qtd</span>
                   </InfoItemHeader>
                   <InfoItemHeader>
                     <span>Total</span>
                   </InfoItemHeader>
-                  <InfoItemHeader>
-                    <span>Deletar</span>
+                  <InfoItemHeader className="info-item-box">
+                    <span>Del</span>
                   </InfoItemHeader>
                 </HeaderItems>
               </InfoList>
@@ -125,7 +118,7 @@ export const ListContainer = () => {
                   <InfoItem>
                     <li>{item.value}</li>
                   </InfoItem>
-                  <InfoItem>
+                  <InfoItem className="info-item-box">
                     <span>
                       <input
                         type="number"
@@ -136,7 +129,7 @@ export const ListContainer = () => {
                       />
                     </span>
                   </InfoItem>
-                  <InfoItem>
+                  <InfoItem className="info-item-box">
                     <span>
                       <input
                         type="number"
@@ -150,7 +143,7 @@ export const ListContainer = () => {
                   <InfoItem>
                     <span>R$ {(item.quantity * item.price).toFixed(2)}</span>
                   </InfoItem>
-                  <InfoItem>
+                  <InfoItem className="info-item-box">
                     <span className="delete" onClick={() => deleteItem(index)}>
                       <RiDeleteBin5Fill />
                     </span>
